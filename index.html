@@ -14,14 +14,18 @@
       <div class="card text-center my-2">
         <div class="card-body">
           <form>
-            <div class="form-group my-2">
-              <textarea type="text" class="form-control" id="content" style="width: 100%; height: 427px;"></textarea>
+            <div class="form-group my-4">
+              <label for="content" class="h3">天堂王表過濾器</label>
+              <textarea type="text" class="form-control" id="content" style="width: 100%; height: calc(100vh - 220px);"></textarea>
             </div>
-            <button type="button" class="btn btn-primary" onclick="calculate('04')">04 王表</button>
-            <button type="button" class="btn btn-danger" onclick="calculate('05')">05 王表</button>
-            <button type="button" class="btn btn-warning" onclick="calculate('06')">06 王表</button>
-            <button type="button" class="btn btn-success" onclick="calculate('07')">07 王表</button>
+            <button type="button" class="btn btn-primary mx-2" onclick="calculate('04')">04 王表</button>
+            <button type="button" class="btn btn-danger mx-2" onclick="calculate('05')">05 王表</button>
+            <button type="button" class="btn btn-warning mx-2" onclick="calculate('06')">06 王表</button>
+            <button type="button" class="btn btn-success mx-2" onclick="calculate('07')">07 王表</button>
           </form>
+        </div>
+        <div>
+          <p id="status"></p>
         </div>
       </div>
     </div>
