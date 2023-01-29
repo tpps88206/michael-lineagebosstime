@@ -11,7 +11,9 @@ function calculate(server) {
 
   for (var line of content.split("\n")) {
     var isNeedStore = true;
- 
+
+    console.log(line.substr(0, 2));
+
     // 如果每一行開頭是 __ 表示是空的王可以直接刪掉
     if (line.substr(0, 3) === " __") {
       break;
@@ -35,4 +37,16 @@ function calculate(server) {
   }
 
   document.getElementById("content").value = result;
+  
+  // 自動複製到剪貼簿
+  triggerCopy();
+}
+
+function triggerCopy() {
+  const element = document.getElementById("content");
+  element.select();
+  element.setSelectionRange(0, 99999);
+  document.execCommand('copy');
+  
+  document.getElementById("status").innerHTML = "已自動將結果複製到剪貼簿 🎉";
 }
